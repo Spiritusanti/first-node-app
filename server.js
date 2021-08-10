@@ -1,6 +1,7 @@
-const fs = require('fs');
+const http = require('http');
 
-const sumNumbers = (a, b) => {
-    return a + b;
-}
-fs.writeFileSync('hello.txt', 'Hello from nodeJS');
+const server = http.createServer((req, res) => {
+    console.log(req);
+});
+
+server.listen(3100);
